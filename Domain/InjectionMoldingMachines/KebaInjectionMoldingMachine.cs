@@ -74,7 +74,7 @@ public class KebaInjectionMoldingMachine
     {
 
 
-        _busControl.Publish<UaMessage>(new UaMessage(metricMessage.Name,metricMessage.Value));
+        _busControl.Publish<UaMessage>(new UaMessage(metricMessage.Name,metricMessage.Value,this.MachineId));
     }
 
     private void HandleDoorOpened (MetricMessage metricMessage)
